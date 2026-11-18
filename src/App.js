@@ -1,15 +1,19 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Container } from 'react-bootstrap';
+import Login from './component/LogIn'
 import Home from './component/Home'
+import MainAdmin from './component/MainAdmin';
 function App() {
     return (
         <>
             <BrowserRouter>
-                <Container>
+                
                     <Routes>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/" element={<Login />} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="/homeadmin" element={<MainAdmin />} />
                     </Routes>
-                </Container>
+                
             </BrowserRouter >
         </>
     )
